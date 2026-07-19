@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, sq, temp;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    sq = n * n;
+    temp = n;
+
+    while (temp > 0)
+    {
+        if (temp % 10 != sq % 10)
+        {
+            printf("Not Automorphic Number");
+            return 0;
+        }
+
+        temp /= 10;
+        sq /= 10;
+    }
+
+    printf("Automorphic Number");
+
+    return 0;
+}
