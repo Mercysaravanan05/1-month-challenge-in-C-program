@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, rem, duck = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n == 0)
+    {
+        printf("Not Duck Number");
+        return 0;
+    }
+
+    while (n != 0)
+    {
+        rem = n % 10;
+
+        if (rem == 0)
+            duck = 1;
+
+        n /= 10;
+    }
+
+    if (duck)
+        printf("Duck Number");
+    else
+        printf("Not Duck Number");
+
+    return 0;
+}
